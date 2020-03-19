@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Timestamp Microservice</title>
+  <link rel="stylesheet" type="text/css" href="/public/style.css">
+</head>
+<body>
+  <h1 id="title">API Timestamp Microservice</h1>
+  <p>This is an API that takes a data string compliant with ISO-6801 (e.g. 2020-1-1)
+      and converts into JSON format. 
+  </p>
+  <p>The data string can be added to the URL to send a GET request. For example,
+    <code>[project_url]/api/timestamp/2020-2-2</code>. 
+  Or, you add the data string into the input box below and submit it via a POST request</p>
+  <p>Once the data string is submitted, a page will be returned with the date in JSON format e.g. 
+    <code>{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"} </code>
+  </p>
+  <form action="/api/timestamp/" method="post">
+    <label for="date">Date</label>
+    <input id="date" type="text" name="date" placeholder="2020-2-20">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
